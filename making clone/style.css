@@ -1,0 +1,55 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 25px;
+  height: 30px;
+  box-shadow: 1px 1px 1px #eee;
+}
+
+.nav2 {
+  display: flex;
+  padding: 20px;
+  gap: 30px;
+  cursor: pointer;
+}
+.iim {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  width: 100%;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+}
+p {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  /* display: inline-block; */
+  background-color: #255ea1;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 3px;
+  font-size: 20px;
+  cursor: pointer;
+}
