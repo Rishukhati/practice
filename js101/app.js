@@ -83,3 +83,71 @@ function processNumber(number, op) {
 }
 const user = processNumber(5, double);
 console.log(user);
+
+/*
+❓ Task
+
+Write a function called countEvenNumbers that:
+
+Takes an array of numbers
+
+Uses a for loop
+
+Counts how many even numbers are in the array
+
+Returns the count */
+
+const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function countEvenNumbers(num) {
+  let count = 0;
+
+  for (i = 0; i < num.length; i++) {
+    if (num[i] % 2 === 0) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countEvenNumbers(num));
+
+/*
+setTimeout Question
+❓ Task
+
+Write a program that:
+
+Prints "Start"
+
+After 2 seconds, prints "Processing..."
+
+After 4 seconds, prints "Done" */
+
+console.log("Start");
+
+setTimeout(function () {
+  console.log("Processing...");
+}, 2000);
+
+setTimeout(function () {
+  console.log("Done");
+}, 4000);
+
+/*
+❓ Task
+
+Write a program that:
+
+Prints "Hello"
+
+After 3 seconds, prints "Welcome to JavaScript"*/
+
+console.log("hello");
+
+setTimeout(function print() {
+  console.log("welcome to javaScript");
+}, 3000);
+
+const myVariable = 5;
+
+console.log(myVariable);
