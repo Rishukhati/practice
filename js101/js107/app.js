@@ -35,10 +35,3 @@ function calculateResult(x, y, op) {
 }
 const abc = calculateResult(3, 4, multiply);
 console.log(abc);
-
-
-let num = [1,2,3,4,5]
-function filterArray(num){
-    for (let i = 1 ; i<0 ; i++)
-        
-}
