@@ -151,3 +151,49 @@ setTimeout(function print() {
 const myVariable = 5;
 
 console.log(myVariable);
+
+
+setTimeout(() => {
+  console.log("Hello after 1 second");
+}, 1000);
+
+
+function waitTwoSeconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve("Done");
+    }, 2000);
+  });
+}
+
+waitTwoSeconds().then(result => console.log(result));
+
+
+function checkNumber(num) {
+  return new Promise((resolve, reject) => {
+    if (typeof num === "number") {
+      resolve("Valid number");
+    } else {
+      reject("Invalid number");
+    }
+  });
+}
+
+checkNumber(5).then(console.log).catch(console.log);
+
+function delayedSquare(num) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(num * num);
+    }, 1000);
+  });
+}
+
+delayedSquare(4).then(result => console.log(result));
+
+async function run() {
+  const result = await waitTwoSeconds();
+  console.log(result);
+}
+
+run();
