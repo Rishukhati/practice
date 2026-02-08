@@ -197,3 +197,30 @@ async function run() {
 }
 
 run();
+
+delayedSquare(4).then(result => console.log(result));
+
+async function run() {
+  const result = await waitTwoSeconds();
+  console.log(result);
+}
+
+run();
+
+delayedSquare(4).then(result => console.log(result));
+
+async function run() {
+  const result = await waitTwoSeconds();
+  console.log(result);
+}
+
+run();
+
+delayedSquare(4).then(result => console.log(result));
+
+async function run() {
+  const result = await waitTwoSeconds();
+  console.log(result);
+}
+
+run();
