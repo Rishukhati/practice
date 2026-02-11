@@ -105,3 +105,19 @@ async function run() {
 }
 
 run();
+
+
+function findLargest(array) {
+  let largest = array[0];
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > largest) {
+      largest = array[i];
+    }
+  }
+
+  return largest;
+}
+
+console.log(findLargest([3, 7, 2, 9, 4])); // 9
+console.log(findLargest([-5, -2, -10]));  // -2
