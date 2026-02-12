@@ -121,3 +121,17 @@ function findLargest(array) {
 
 console.log(findLargest([3, 7, 2, 9, 4])); // 9
 console.log(findLargest([-5, -2, -10]));  // -2
+
+function todoadd() {
+  const value = document.querySelector("input").value;
+  const spanEL = document.createElement("span");
+  const buttonEL = document.createElement("button");
+  spanEL.innerHTML = value;
+  buttonEL.innerHTML = "delete";
+
+  const divEl = document.createElement("div");
+  divEl.appendChild(spanEL);
+  divEl.appendChild(buttonEL);
+
+  document.querySelector("body").appendChild(divEl);
+}
