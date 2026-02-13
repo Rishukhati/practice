@@ -135,3 +135,33 @@ function todoadd() {
 
   document.querySelector("body").appendChild(divEl);
 }
+
+function delayedSquare(num, time) {
+  return new Promise((resolve, reject) => {
+    if (typeof num !== "number" || typeof time !== "number") {
+      reject("Invalid input");
+      return;
+    }
+
+    setTimeout(() => {
+      resolve(num * num);
+    }, time);
+  });
+}
+
+delayedSquare(5, 2000)
+  .then((result) => console.log(result)) // 25 (after 2s)
+  .catch((error) => console.log(error));
+
+//   Question 2: Delayed Square to async/await.
+
+async function run() {
+  try {
+    const result = await delayedSquare(5, 2000);
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+run();
