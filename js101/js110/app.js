@@ -179,3 +179,26 @@ function double(num) {
 }
 
 processArray([1, 2, 3], double);
+
+
+
+
+function gradeStudent(marks){
+    if (marks >=  80){
+        return "A";
+    } else if (marks >=  60){
+        return "B";
+    } else if (marks >=  40 && marks < 60){
+        return "C";
+    }else  {
+        return "Fail";
+    }
+}
+
+const result = gradeStudent(82)
+console.log(result)
+
+
+
+
+
