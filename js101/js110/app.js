@@ -29,7 +29,7 @@ function gradeStudent(marks){
     }
 }
 
-const result = gradeStudent(82)
+// const result = gradeStudent(82)
 console.log(result)
 
 
@@ -202,3 +202,69 @@ console.log(result)
 
 
 
+function checkNumber(num) {
+  return new Promise((resolve, reject) => {
+    if (num % 2 === 0) {
+      resolve("Number is even");
+    } else {
+      reject("Number is odd");
+    }
+  });
+}
+
+checkNumber(6)
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+function checkAge(age) {
+  return new Promise((resolve, reject) => {
+    if (18 < age) {
+      resolve("Access granted");
+    } else {
+      reject("Access denied");
+    }
+  });
+}
+
+checkAge(20)
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+/*Question 1 (Very Easy)
+Task
+
+Create a function isPositive that:
+
+Takes a number
+
+Returns a Promise
+
+Resolves with "Positive number" if number > 0
+
+Rejects with "Not a positive number" otherwise */
+
+function isPositive(num) {
+  return new Promise((resolve, rejects) => {
+    if (num > 0) {
+      resolve("positive number");
+    } else {
+      rejects("not a positive number");
+    }
+  });
+}
+
+isPositive(22)
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
