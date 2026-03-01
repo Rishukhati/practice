@@ -87,3 +87,48 @@ function calculateResult(x, y, op) {
 }
 const abc = calculateResult(3, 4, multiply);
 console.log(abc);
+
+for (let i = 0; i <= 5; i++) {
+  console.log(i);
+}
+
+const myArrary = [1, 2, 3, 4, 5];
+console.log(myArrary);
+
+const myObject = {
+  name: "john",
+  age: 25,
+};
+
+function greet(name) {
+  console.log("Hello," + name + "!");
+}
+
+greet(Rishabh);
+
+function sum(a, b) {
+  return a + b;
+}
+function doubleSum(callback) {
+  let result = callback(); // Calling the sum function and storing its result
+  console.log(2 * result); // Doubling the result and printing it to the console
+}
+doubleSum(function () {
+  return sum(3, 5);
+}); // This will print "16" to the console (since the sum of 3 and 5 is 8, which gets doubled)
+
+setTimeout(
+  function delayedGreeting(name) {
+    console.log("Hello," + name + "!");
+  },
+  2000,
+  "rishabh",
+);
+// or
+function delayedGreeting(name) {
+  return setTimeout(() => {
+    console.log(`Hello, ${name}!`);
+  }, 2000);
+}
+
+const id = delayedGreeting("rishu");
