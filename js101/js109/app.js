@@ -132,3 +132,16 @@ function delayedGreeting(name) {
 }
 
 const id = delayedGreeting("rishu");
+
+console.log("Start");
+
+setTimeout(function () {
+  console.log("Hello after 2 seconds");
+}, 2000);
+function delayedGreeting(name) {
+  return setTimeout(() => {
+    console.log(`Hello, ${name}!`);
+  }, 2000);
+}
+
+const id = delayedGreeting("rishu");
