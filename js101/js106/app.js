@@ -84,3 +84,17 @@ function delayedGreeting(name) {
 }
 
 const id = delayedGreeting("rishu");
+
+function checkEvenOdd(num) {
+  return new Promise((resolve, reject) => {
+    if (num % 2 === 0) {
+      resolve("Even number");
+    } else {
+      reject("Odd number");
+    }
+  });
+}
+
+checkEvenOdd(6)
+  .then((result) => console.log(result))
+  .catch((error) => console.log(error));
