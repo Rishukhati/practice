@@ -224,3 +224,34 @@ async function run() {
 }
 
 run();
+
+function delayedGreeting(name) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Hello " + name);
+    }, 2000);
+  });
+}
+
+async function run() {
+  const message = await delayedGreeting("Rishabh");
+  console.log(message);
+}
+
+run();
+
+function checkEven(num) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (num % 2 === 0) {
+        resolve("Number is even");
+      } else {
+        reject("Number is odd");
+      }
+    }, 2000);
+  });
+}
+
+checkEven(4)
+  .then(result => console.log(result))
+  .catch(error => console.log(error));
